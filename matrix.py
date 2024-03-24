@@ -83,7 +83,9 @@ class Square_Matrix(Frame):
     def button_pressed(self, location):
         '''
         Matrix.button_pressed
-        presses the button and returns the location of the tile
+        presses the button 
+        returns the location of the tile
+        returns int
         '''
 
         row, column = location
@@ -108,6 +110,8 @@ class Square_Matrix(Frame):
         )
 
         self.master.update()
+
+        return int
 
 
 a = Square_Matrix(root, 7)
