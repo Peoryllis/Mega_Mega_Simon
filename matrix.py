@@ -38,7 +38,7 @@ class Square_Matrix(Frame):
             'green':['#137413', '#60e528'],
             'orange':['#cc5500', '#ff800d'],
             'purple':['#6b01d7', '#df00fe'],
-            'brown':['#673400', '#b5651D'],
+            'brown':['#673400', '#d3b683'],
             'pink':['#AA336A', '#fe019a'],
             'turquoise':['#009896', '#99d5d5'],
             'gray': ['#454545', '#e9e9e9']
@@ -114,7 +114,7 @@ class Square_Matrix(Frame):
         return int
 
 
-a = Square_Matrix(root, 7)
+a = Square_Matrix(root, 4)
 a.pack(fill=BOTH, expand=1)
 
 root.mainloop()
