@@ -114,7 +114,7 @@ class Square_Matrix(Frame):
         return int
 
 
-a = Square_Matrix(root, 4)
+a = Square_Matrix(root, 6)
 a.pack(fill=BOTH, expand=1)
 
 root.mainloop()
