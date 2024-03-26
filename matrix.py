@@ -78,7 +78,7 @@ class Square_Matrix(Frame):
                 
                 self.colorMatrix[row, column] = color
 
-                self.master.update()
+                self.master.update()   
 
     def button_pressed(self, location):
         '''
@@ -90,8 +90,6 @@ class Square_Matrix(Frame):
 
         row, column = location
         row += 1; column += 1
-
-        number = (self.size*row) - (self.size - column)
 
         color = self.colorMatrix[row-1, column-1]
 
@@ -111,10 +109,12 @@ class Square_Matrix(Frame):
 
         self.master.update()
 
-        return int
+        return location
 
 
 a = Square_Matrix(root, 6)
 a.pack(fill=BOTH, expand=1)
+
+root.update()
 
 root.mainloop()
