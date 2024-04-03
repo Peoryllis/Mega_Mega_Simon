@@ -55,7 +55,6 @@ class Square_Matrix(Frame):
                 color = random.choice(self.colorsKey)
 
                 location = (row, column)
-                print(f'\n\n{color}\n\n')
 
                 self.matrix[row, column] = Label(
                     self, 
@@ -112,7 +111,7 @@ class Square_Matrix(Frame):
         return location
 
 
-a = Square_Matrix(root, 6)
+a = Square_Matrix(root, 3)
 a.pack(fill=BOTH, expand=1)
 
 root.update()
