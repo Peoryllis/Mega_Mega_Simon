@@ -111,7 +111,7 @@ class Square_Matrix(Frame):
         return location
 
 
-a = Square_Matrix(root, 3)
+a = Square_Matrix(root, 5)
 a.pack(fill=BOTH, expand=1)
 
 root.update()
