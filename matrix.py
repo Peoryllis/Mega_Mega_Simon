@@ -73,7 +73,9 @@ class Square_Matrix(Frame):
                 
                 self.colorMatrix[row, column] = color
 
-                self.master.update()   
+                self.master.update()
+
+                self.lastButton = ()   
 
     def button_pressed(self, location):
         '''
@@ -104,4 +106,4 @@ class Square_Matrix(Frame):
 
         self.master.update()
 
-        return location
+        self.lastButton = location
