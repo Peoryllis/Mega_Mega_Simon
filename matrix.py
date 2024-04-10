@@ -3,10 +3,6 @@ import numpy as np
 import time
 import random
 
-root = Tk()
-root['bg'] = 'white'
-root.geometry('600x600')
-
 class Square_Matrix(Frame):
     '''
     Matrix() creates a matrix of buttons as large as needed
@@ -109,11 +105,3 @@ class Square_Matrix(Frame):
         self.master.update()
 
         return location
-
-
-a = Square_Matrix(root, 5)
-a.pack(fill=BOTH, expand=1)
-
-root.update()
-
-root.mainloop()
