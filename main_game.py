@@ -94,8 +94,6 @@ class MegaSimon(Frame):
             self.matrix = Square_Matrix(self, matrixSize)
             self.matrix.place(relx=0, rely=0.15, relwidth=1, relheight=0.85)
 
-            print(size)
-
         temporaryFrame = Frame(
             self,
             bg=self['bg']
