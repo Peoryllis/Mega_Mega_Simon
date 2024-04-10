@@ -69,6 +69,7 @@ class MegaSimon(Frame):
 
         self.playerTurn = False
         self.playerWinning = None
+        self.size = 2
 
         self.setup()
 
@@ -90,9 +91,22 @@ class MegaSimon(Frame):
             for element in size: matrixSize += element
 
             matrixSize = int(matrixSize)
+            self.size = matrixSize
 
             self.matrix = Square_Matrix(self, matrixSize)
             self.matrix.place(relx=0, rely=0.15, relwidth=1, relheight=0.85)
+
+            oldFrame.destroy()
+
+            root.update()
+
+            self.computer_sequence = []
+            self.player_sequence = []
+
+            self.playerTurn = False
+            self.playerWinning = None
+
+            self.play_game()
 
         temporaryFrame = Frame(
             self,
@@ -137,18 +151,23 @@ class MegaSimon(Frame):
 
         beginButton.place(relx=0.5, rely=0.5, relwidth=0.5, relheight=0.1, anchor='center')
 
-
-
-
-    #save user choice
-
-    #delete old Frame and generate matrix
-
-    #play game
-
-
     def computer_turn(self):
-        pass
+        '''
+        computer_turn
+        has the computer take their turn
+        '''
+        for location in self.computer_sequence:
+            self.matrix.button_pressed(location)
+            time.sleep(1)
+        
+        self.computer_sequence.append(
+            (random.randrange(self.size), random.randrange(self.size))
+        )
+
+        self.matrix.button_pressed(self.computer_sequence[-1])
+
+        
+
     def compare_sequences(self):
         pass
     def play_game(self):
