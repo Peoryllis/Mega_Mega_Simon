@@ -113,7 +113,7 @@ class MegaSimon(Frame):
 
         instructionLabel.place(relx=0.5, rely=0.01, relwidth=0.75, relheight=0.1, anchor='n')
 
-        choices = list(f'{size}x{size}' for size in range(2, 11))
+        choices = list(f'{size}x{size}' for size in range(2, 16))
 
         setting = StringVar()
         setting.set(choices[0])
