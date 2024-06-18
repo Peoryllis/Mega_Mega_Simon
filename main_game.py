@@ -1,7 +1,7 @@
 from matrix import *
 import sys
 
-sys.path.append('/Users/anayaahanotu/Coding/GitHub/')
+sys.path.append('/Users/anayaahanotu/Coding/')
 
 from Special_tkinter_objects import tkinterPlus2 as tk2
 

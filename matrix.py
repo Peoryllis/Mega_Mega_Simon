@@ -27,6 +27,8 @@ class Square_Matrix(Frame):
         self.size = size
 
         #make unique colors
+        #list index 0: color when not pressed
+        #list index 1: color when pressed
         self.colors = {
             'red':['#7b0000', '#ff0000'],
             'blue':['#0129bf', '#88c5fc'],
@@ -46,9 +48,15 @@ class Square_Matrix(Frame):
 
         for row in range(size):
             for column in range(size):
+
+                #make sure the matrix completely fits in the frame
                 relx = column/size
                 rely = row/size
+
+                #choose a unique color about every time
                 color = random.choice(self.colorsKey)
+
+                #set location
 
                 location = (row, column)
 
@@ -75,14 +83,14 @@ class Square_Matrix(Frame):
 
                 self.master.update()
 
-                self.lastButton = ()   
+        self.lastButton = ()   
 
     def button_pressed(self, location):
         '''
         Matrix.button_pressed
         presses the button 
         returns the location of the tile
-        returns int
+        returns None
         '''
 
         row, column = location
