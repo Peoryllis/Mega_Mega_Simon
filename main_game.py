@@ -215,7 +215,8 @@ class MegaSimon(Frame):
             if len(self.player_sequence) == len(self.computer_sequence):
                 self.playerTurn = False
                 self.score = len(self.player_sequence)
-                if self.highscore < self.score: self.highscore = self.score
+                if self.highscore < self.score: 
+                    self.highscore = self.score
 
                 self.highScoreLabel['text'] = f'High score: {self.highscore}'
                 self.scoreLabel['text'] = f'Score: {self.score}'
