@@ -1,9 +1,9 @@
 from matrix import *
 import sys
 
-sys.path.append('/Users/anayaahanotu/Coding/')
+sys.path.append('/Users/anayaahanotu/Documents/Coding/GitHub/Special_tkinter_objects/')
 
-from Special_tkinter_objects import tkinterPlus2 as tk2
+import tkinterPlus2 as tk2
 
 
 root = Tk()
