@@ -153,13 +153,14 @@ class MegaSimon(Frame):
         beginButton = tk2.LabelButton(
             temporaryFrame,
             command=lambda: (begin(setting.get(), temporaryFrame)),
-            kwargs={
+            clickingspeed=0.1,
+            **{
                 'bg':'white',
                 'fg': 'black',
                 'font':self.font + [18],
                 'text': 'Begin!!!'
-            },
-            clickingspeed=0.1
+            }
+
         )
 
         beginButton.place(relx=0.5, rely=0.5, relwidth=0.5, relheight=0.1, anchor='center')
@@ -271,7 +272,7 @@ class MegaSimon(Frame):
         restartButton = tk2.LabelButton(
             temporaryFrame,
             command= lambda: (self.setup(), temporaryFrame.destroy()),
-            kwargs={
+            **{
                 'bg': 'white',
                 'fg': 'black',
                 'text': 'Play again',
@@ -284,7 +285,7 @@ class MegaSimon(Frame):
         endButton = tk2.LabelButton(
             temporaryFrame,
             command= lambda: (root.destroy()),
-            kwargs={
+            **{
                 'bg': 'white',
                 'fg': 'black',
                 'text': 'end game',
